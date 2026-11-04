@@ -1,0 +1,9 @@
+services:
+  drawer-index:
+    build: .
+    container_name: drawer-index
+    ports:
+      - "8095:3000"          # open http://<host>:8095 ; change the left number to use a different host port
+    volumes:
+      - ./data:/data         # your inventory + photos live here on the host
+    restart: unless-stopped

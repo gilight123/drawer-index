@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# runtime data (your inventory, photos, backups) — never commit this
+data/
+drawer-index-data/
+
+# build output
+dist/
+
+# logs & os cruft
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/

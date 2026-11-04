@@ -1,0 +1,30 @@
+{
+  "name": "drawer-index",
+  "version": "1.0.0",
+  "description": "Self-hosted QR-code inventory for drawers, bins and boxes",
+  "author": "gilight123 <hilazonmozar@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gilight123/drawer-index.git"
+  },
+  "main": "server.js",
+  "bin": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build:win": "pkg . --targets node22-win-x64 --output dist/DrawerIndex.exe",
+    "build:linux": "pkg . --targets node22-linux-x64 --output dist/drawer-index-linux"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.25.0"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ],
+    "outputPath": "dist"
+  }
+}
